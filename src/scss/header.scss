@@ -1,0 +1,124 @@
+.header {
+    background: url(../img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::after{
+        content: '';
+        background-color: $mask-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+    }
+}
+
+.header__top {
+    padding-top: 36px;
+    margin-bottom: 130px;
+}
+.header__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: self-start;
+    border-bottom: 1px solid $navigation-separator-color;
+}
+.logo {
+
+}
+.logo__img {
+    
+}
+.menu {
+
+}
+.menu__list {
+    display: flex;
+    .menu__list-item {
+
+        .menu__link {
+            display: inline-block;
+            width: 134px;
+            text-align: center;
+            line-height: 28px;
+            color: $primary-color;  
+            padding-bottom: 32px;  
+
+            text-transform: uppercase;
+            font-size: 13px;
+
+            border-bottom: 2px solid transparent;
+            transition: 0.5s ease-out;
+
+            &:hover {
+                cursor: pointer;
+                border-bottom-color: $navigation-hover-color; 
+            }
+    
+            &:active {  
+                border-bottom-color: $navigation-active-color;
+                color:$navigation-active-color ;
+            }
+        }
+        
+        
+    }
+}
+
+.header__content {
+
+}
+.header__content-inner {
+
+}
+.header__content-title {
+    font-size: 64px;
+    font-weight: 900;
+
+    color: $primary-color;
+    text-transform: uppercase; 
+    max-width: 1170px;
+
+    margin: auto;
+    text-align: center;
+    margin-bottom:30px;
+}
+.header__content-description {
+    font-size: 24px;
+    font-weight: 400;
+
+    color: $primary-color;
+    max-width: 1170px;
+
+    margin: auto;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.header__button {
+    display: flex;
+    justify-content: center;
+}
+.button {
+    width: 370px;
+    line-height: 78px;
+    background-color: $button-color;
+    margin-bottom: 120px;
+
+    color: $primary-color;
+    text-align: center;
+    font-size: 24;
+    font-weight: 900;
+    text-transform: uppercase;  
+    transition: 0.5s ease-out; 
+
+    &:hover{
+        background-color: $button-hover-color;
+    }
+    &:active{
+        background-color: $button-color;
+        box-shadow: 0 0 30px $button-color;
+    }
+}

@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+@import './_variables.scss';
+@import './_mixsins.scss';
+@import './_cdn.scss';
+@import '../fonts/fonts';
+@import './header.scss';
+
+
+html{
+    font-family: $font-primary;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
