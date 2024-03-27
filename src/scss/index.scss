@@ -6,11 +6,14 @@
     text-decoration: none;
 }
 
-@import './_variables.scss';
-@import './_mixsins.scss';
-@import './_cdn.scss';
-@import '../fonts/fonts';
-@import './header.scss';
+@import './base/cdn';   
+@import './base/fonts';
+@import './base/mixsins';
+@import './base/variables';
+
+@import './blocks/header';
+@import './blocks/features';
+@import './blocks/gallery';
 
 
 html{

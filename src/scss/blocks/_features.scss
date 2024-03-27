@@ -1,0 +1,31 @@
+.features {
+    padding: 116px 0 ;
+}
+
+.features_grid {
+    display: grid;
+    grid-template:repeat(2, 305)/repeat(3, 370px);
+    grid-gap: 89px 31px;
+}
+.features_grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.features_item-icon {
+   margin-bottom: 29px;
+}
+
+.features_item-title {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.features_item-description {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}

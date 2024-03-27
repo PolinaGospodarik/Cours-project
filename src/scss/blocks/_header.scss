@@ -29,16 +29,12 @@
 .logo {
 
 }
-.logo__img {
-    
-}
 .menu {
 
 }
 .menu__list {
     display: flex;
-    .menu__list-item {
-
+    &-item {
         .menu__link {
             display: inline-block;
             width: 134px;
@@ -63,8 +59,7 @@
                 color:$navigation-active-color ;
             }
         }
-        
-        
+
     }
 }
 
