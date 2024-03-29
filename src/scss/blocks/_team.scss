@@ -1,0 +1,68 @@
+.team {
+    
+}
+.team__grid {
+    padding: 114px 0;
+    display: grid;
+    grid-template: repeat(1, minmax(619px, auto)) / repeat(4, 270px);
+    grid-column-gap: 30px ;
+}
+.team__grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.team__img {
+    margin-bottom: 30px;
+}
+.team__title {
+    font-size: 24px;
+    font-weight:700;
+    color: $title-color;
+
+    margin-bottom: 5.29px;
+}
+.team__subtitle {
+    display: block;
+    font-size: 18;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $accent-color;
+
+    margin-bottom: 17.86px;
+}
+.team__description {
+    font-size: 18;
+    font-weight: 400;
+    margin-bottom: 37.86px;
+}
+.team__icon {
+    display: flex;
+    justify-content: flex-start;
+}
+.team__icon-item {
+    margin-right: 5px;
+    border: 1px solid $icon-color;
+}
+.team__icon-item:last-child{
+    margin-right: 0;
+}
+
+.team__icon-link {
+    display: inline-block;
+    width: 39px;
+    line-height: 39px;
+    text-align: center;
+}
+.fa-facebook-f {
+    font-size: 18px;
+    color: $icon-color;
+}
+.fa-twitter {
+    font-size: 18px;
+    color: $icon-color;
+}
+.fa-linkedin {
+    font-size: 18px;
+    color: $icon-color;
+}
