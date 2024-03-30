@@ -1,6 +1,7 @@
 
 .gallery-inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
@@ -8,9 +9,9 @@
 
 
 .gallery__item {
-    flex-basis: 25%; /* Учитываем отступы (gap) между изображениями */
-    max-width: calc(25% - 4px); /* Учитываем отступы (gap) между изображениями */
-    max-height: calc(25vw - 4px); /* Максимальная высота равна 25% от ширины видимой области (viewport) минус отступы */
+    flex-basis: 25%; 
+    max-width: calc(25% - 4px);
+    max-height: calc(25vw - 4px); 
     margin: 2 2px;
     cursor: pointer;
     position: relative;
@@ -51,7 +52,6 @@
     }
     
     .gallery__item-title{
-       
         font-size: 24px;
         font-weight: 900;
         color: $primary-color;
@@ -65,7 +65,6 @@
         color: $primary-color;
     }
 
-    
 }
 
 .gallery__item img {

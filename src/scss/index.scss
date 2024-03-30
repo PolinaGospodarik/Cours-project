@@ -14,8 +14,8 @@
 @import './blocks/header';
 @import './blocks/features';
 @import './blocks/gallery';
-@import './blocks/./team';
-
+@import './blocks/team';
+@import './blocks/slick';
 @import './blocks/downloand';
 @import './blocks/footer';
 
@@ -52,7 +52,6 @@ html{
         box-shadow: 0 0 30px $button-color;
     }
 }
-
 .icon-item {
     border: 1px solid $icon-color;
 }

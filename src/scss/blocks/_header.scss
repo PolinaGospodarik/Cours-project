@@ -1,5 +1,5 @@
 .header {
-    padding-bottom: 120px;
+    padding: 36px 0 120px;
     background: url(../img/background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -18,24 +18,27 @@
 }
 
 .header__top {
-    padding-top: 36px;
     margin-bottom: 130px;
 }
 .header__top-inner {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: self-start;
+    align-items:start;
     border-bottom: 1px solid $navigation-separator-color;
 }
 .header__logo {
-
+    
 }
 .header__menu {
-
+   
+    
 }
 .menu__list {
     display: flex;
-    &-item {
+    flex-wrap: wrap;
+    
+    .menu__list-item {
         .menu__link {
             display: inline-block;
             width: 134px;
@@ -62,6 +65,9 @@
         }
 
     }
+}
+.menu__burger{
+    display: none;
 }
 
 .header__content {
