@@ -1,28 +1,48 @@
 .downloand {
     padding: 114px 0;
+    @include tablet {
+        padding: 77px 0;
+    }
 }
 .downloand-inner {
 }
 .downloand__title {
     max-width: 100%;
     text-align: center;
-    font-size: 30px;
-    font-weight: 500;
+    @include text (30px, 500, $download-description-color);
     line-height: 70px;
     margin-bottom: 5.29px; 
+
+    @include tablet{
+        @include text (24px, 500, $download-description-color);
+        line-height: 60px;
+        margin-bottom: 4.71px; 
+    }
+    @include mobile{
+        @include text (18px, 500, $download-description-color);
+        line-height: 0px;
+        margin-bottom: 22px; 
+    }
 }
 .downloand__description {
     display: block;
     max-width: 100%;
     text-align: center;
-    font-size: 18px;
-    font-weight: 700;
+    @include text (18px, 700, $download-description-color);
     text-transform: uppercase;
     line-height: 21px;
     margin-bottom: 47.71px;
+
+    @include tablet{
+        @include text (24px, 500, $download-description-color);
+        line-height: 60px;
+    }
+    @include mobile{
+        @include text (18px, 500, $download-description-color);
+        line-height: 0px;
+    }
 }
 .downloand__button {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center ;
+    margin: auto;
+    text-align: center;
 }

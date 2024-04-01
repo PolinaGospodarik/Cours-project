@@ -30,6 +30,17 @@ html{
     margin: auto;
     position: relative;
     z-index: 2;
+
+    @include tablet{
+        width: 984px;
+        padding: 0 20px;
+    }
+
+    @include mobile{
+        width: 100%;
+        padding: 0 20px;    
+    } 
+        
 }
 
 .button {
@@ -37,7 +48,7 @@ html{
     width: 370px;
     line-height: 78px;
     background-color: $button-color;
-
+    
     text-align: center;
 
     @include text(24px,900,$primary-color);  

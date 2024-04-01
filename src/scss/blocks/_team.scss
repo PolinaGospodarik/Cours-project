@@ -2,11 +2,10 @@
     padding: 114px 0;
     display: flex;
     justify-content: center;
+    @include tablet{
+        padding: 78px 0;
+    }
     @include mobile{
-        .container{
-            width: 100%;
-            padding: 0 20px;    
-        }
         padding: 35px 0;
     }
 }
@@ -18,10 +17,11 @@
     grid-template: repeat(1, minmax(619px, auto)) / repeat(4, 270px);
     grid-column-gap: 30px ;
     
+    @include tablet{
+        grid-template: repeat(1, minmax(520px, auto)) / repeat(4, 227px);
+        grid-column-gap: 25px ;
+    }
     @include mobile{
-        .container{
-            width: 320px;    
-        } 
         grid-template: repeat(4, minmax(521px, auto)) / repeat(1, 280px);
         grid-row-gap: 56px ;
     }   
@@ -36,27 +36,37 @@
     width: 100%;
 }
 .team__title {
-    @include text(clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem),700,$title-color);
+    @include text(24px,700,$title-color);
     margin-bottom: clamp(0.288rem, 0.273rem + 0.08vw, 0.331rem);
     width: 100%;
+    @include tablet{
+        @include text(18px,700,$title-color);
+    }
+    @include mobile{
+        margin-bottom: 38.5px;
+    }
 }
 .team__subtitle {
     display: block;
-    @include text(clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem),400,$accent-color);
+    @include text(18px,400,$accent-color);
     text-transform: uppercase;
     margin-bottom: 17.86px;
     width: 100%;
-
+    @include tablet{
+        @include text(14px,400,$accent-color);
+    }
     @include mobile{
         margin-bottom: 38.5px;
     }
   
 }
 .team__description {
-    @include text (clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem), 400, $secondary-color);
+    @include text (18px, 400, $secondary-color);
     margin-bottom: 37.86px;
     width: 100%;
-
+    @include tablet{
+        @include text(14px,400,$secondary-color);
+    }
     @include mobile{
         margin-bottom: 55.15px;
     }
