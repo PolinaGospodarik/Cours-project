@@ -1,21 +1,26 @@
-
+.gallery{
+    display: flex;
+    justify-content: center;
+}
 .gallery-inner {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
 
-
 .gallery__item {
     flex-basis: 25%; 
-    max-width: calc(25% - 4px);
-    max-height: calc(25vw - 4px); 
-    margin: 2 2px;
+    max-width: calc(25% - 2px);
+    max-height: calc(25vw - 2px); 
+    margin: 1px;
     cursor: pointer;
     position: relative;
-
+    
+    @include mobile{
+        flex-basis: 50%; 
+        max-width: calc(50% - 4px);
+        max-height: calc(50vw - 4px);  
+    }
  
     &:hover::after {
         background-color: $gallery-item-hover;
@@ -64,12 +69,10 @@
         font-weight: 400;
         color: $primary-color;
     }
-
 }
 
 .gallery__item img {
     width: 100%;
     height: 100%;
     object-fit:cover;
-  
 }

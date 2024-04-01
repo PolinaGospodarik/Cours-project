@@ -6,6 +6,10 @@
     display: grid;
     grid-template: repeat(1, minmax(619px, auto)) / repeat(4, 270px);
     grid-column-gap: 30px ;
+    @include mobile{
+        grid-template: repeat(4, minmax(280px, auto)) / repeat(1, 521px);
+        grid-column-gap: 30px ;
+    }
 }
 .team__grid-item {
     display: flex;

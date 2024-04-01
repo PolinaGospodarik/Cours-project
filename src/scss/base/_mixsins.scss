@@ -1,0 +1,22 @@
+@mixin text($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+// @mixin px-to-rem($px-value) {
+//     $rem-value: $px-value / $base-font-size;
+//     font-size: $rem-value + rem;
+//   }
+
+
+@mixin tablet {
+    @media all and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media all and (max-width: 320px) {
+        @content;
+    }
+}

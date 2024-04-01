@@ -15,6 +15,10 @@
         left: 0;
         top: 0;
     }
+    @media (max-width:320px){
+        width: 100%;
+        
+    }
 }
 
 .header__top {
@@ -31,41 +35,43 @@
     
 }
 .header__menu {
-   
-    
+
 }
 .menu__list {
     display: flex;
     flex-wrap: wrap;
-    
-    .menu__list-item {
-        .menu__link {
-            display: inline-block;
-            width: 134px;
-            text-align: center;
-            line-height: 28px;
-            color: $primary-color;  
-            padding-bottom: 32px;  
+}   
+.menu__list-item {
+    text-align: center;
+    .menu__link {
+        display: inline-block;
+        width: 134px;
+        line-height: 28px;
+        padding-bottom: 32px;  
 
-            text-transform: uppercase;
-            font-size: 13px;
+        text-transform: uppercase;
+        @include text (13px, 700, $primary-color);
 
-            border-bottom: 2px solid transparent;
-            transition: 0.5s ease-out;
+        border-bottom: 2px solid transparent;
+        transition: 0.5s ease-out;
 
-            &:hover {
-                cursor: pointer;
-                border-bottom-color: $navigation-hover-color; 
-            }
-    
-            &:active {  
-                border-bottom-color: $navigation-active-color;
-                color:$navigation-active-color ;
-            }
+        &:hover {
+            cursor: pointer;
+            border-bottom-color: $navigation-hover-color; 
         }
 
+        &:active {  
+            border-bottom-color: $navigation-active-color;
+            color:$navigation-active-color ;
+        }
+    }
+
+    
+    @media (max-width:1024px) {
+        @include text (12px, 700, $primary-color);
     }
 }
+
 .menu__burger{
     display: none;
 }
@@ -77,10 +83,8 @@
 
 }
 .header__content-title {
-    font-size: 64px;
-    font-weight: 900;
+    @include text(64px,900,$primary-color);  
 
-    color: $primary-color;
     text-transform: uppercase; 
     max-width: 1170px;
 
@@ -89,10 +93,8 @@
     margin-bottom:30px;
 }
 .header__content-description {
-    font-size: 24px;
-    font-weight: 400;
+    @include text(24px,400,$primary-color);    
 
-    color: $primary-color;
     max-width: 1170px;
 
     margin: auto;
@@ -100,7 +102,7 @@
     margin-bottom: 80px;
 }
 .header__button {
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    text-align: center;
 }
 
