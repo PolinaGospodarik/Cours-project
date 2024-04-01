@@ -3,10 +3,11 @@
     font-weight: $weight;
     color: $color;
 }
-// @mixin px-to-rem($px-value) {
-//     $rem-value: $px-value / $base-font-size;
-//     font-size: $rem-value + rem;
-//   }
+
+@mixin px-to-rem($px-value) {
+    $rem-value: $px-value / $base-font-size;
+    font-size: $rem-value + rem; 
+}
 
 
 @mixin tablet {

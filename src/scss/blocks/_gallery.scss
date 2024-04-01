@@ -1,6 +1,5 @@
 .gallery{
-    display: flex;
-    justify-content: center;
+    
 }
 .gallery-inner {
     display: flex;
@@ -10,16 +9,16 @@
 
 .gallery__item {
     flex-basis: 25%; 
-    max-width: calc(25% - 2px);
-    max-height: calc(25vw - 2px); 
-    margin: 1px;
+    max-width: calc(25% - 0.125rem);
+    max-height: calc(25vw - 0.125rem); 
+    margin: 0.0625rem;
     cursor: pointer;
     position: relative;
-    
+
     @include mobile{
         flex-basis: 50%; 
-        max-width: calc(50% - 4px);
-        max-height: calc(50vw - 4px);  
+        max-width: calc(50% - 2px);
+        max-height: calc(50vw - 2px);  
     }
  
     &:hover::after {
@@ -48,7 +47,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.5s ease;
         text-align: center;
         z-index: 5;
     }
@@ -57,17 +56,16 @@
     }
     
     .gallery__item-title{
-        font-size: 24px;
-        font-weight: 900;
-        color: $primary-color;
+        @include text (clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem),900,$primary-color);
         text-transform: uppercase;
         line-height: 60px;
         margin-bottom: 20px;
+        @include mobile{
+            line-height: 0px;
+        }
     }
     .gallery__item-description{
-        font-size: 18px;
-        font-weight: 400;
-        color: $primary-color;
+        @include text (clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem),400,$primary-color);
     }
 }
 

@@ -1,15 +1,30 @@
 .team {
-    
-}
-.team__grid {
     padding: 114px 0;
+    display: flex;
+    justify-content: center;
+    @include mobile{
+        .container{
+            width: 100%;
+            padding: 0 20px;    
+        }
+        padding: 35px 0;
+    }
+}
+
+.team__grid {
+    display: flex;
+    justify-content: center;
     display: grid;
     grid-template: repeat(1, minmax(619px, auto)) / repeat(4, 270px);
     grid-column-gap: 30px ;
+    
     @include mobile{
-        grid-template: repeat(4, minmax(280px, auto)) / repeat(1, 521px);
-        grid-column-gap: 30px ;
-    }
+        .container{
+            width: 320px;    
+        } 
+        grid-template: repeat(4, minmax(521px, auto)) / repeat(1, 280px);
+        grid-row-gap: 56px ;
+    }   
 }
 .team__grid-item {
     display: flex;
@@ -17,28 +32,34 @@
     justify-content: space-between;
 }
 .team__img {
-    margin-bottom: 30px;
+    margin-bottom: clamp(1.578rem, 1.47rem + 0.54vw, 1.875rem);
+    width: 100%;
 }
 .team__title {
-    font-size: 24px;
-    font-weight:700;
-    color: $title-color;
-
-    margin-bottom: 5.29px;
+    @include text(clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem),700,$title-color);
+    margin-bottom: clamp(0.288rem, 0.273rem + 0.08vw, 0.331rem);
+    width: 100%;
 }
 .team__subtitle {
     display: block;
-    font-size: 18;
-    font-weight: 400;
+    @include text(clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem),400,$accent-color);
     text-transform: uppercase;
-    color: $accent-color;
-
     margin-bottom: 17.86px;
+    width: 100%;
+
+    @include mobile{
+        margin-bottom: 38.5px;
+    }
+  
 }
 .team__description {
-    font-size: 18;
-    font-weight: 400;
+    @include text (clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem), 400, $secondary-color);
     margin-bottom: 37.86px;
+    width: 100%;
+
+    @include mobile{
+        margin-bottom: 55.15px;
+    }
 }
 .team__icon {
     display: flex;
