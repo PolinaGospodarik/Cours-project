@@ -1,5 +1,5 @@
 .header {
-    padding: 36px 0 120px;
+    padding-bottom:120px;
     background: url(../img/background.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -15,10 +15,6 @@
         left: 0;
         top: 0;
     }
-    @media (max-width:320px){
-        width: 100%;
-        
-    }
 }
 
 .header__top {
@@ -28,7 +24,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items:start;
+    align-items:center;
     border-bottom: 1px solid $navigation-separator-color;
 }
 .header__logo {
@@ -47,8 +43,7 @@
         display: inline-block;
         width: 134px;
         line-height: 28px;
-        padding-bottom: 32px;  
-
+        padding: 32px 0 36px;  
         text-transform: uppercase;
         @include text (13px, 700, $primary-color);
 
@@ -64,12 +59,17 @@
             border-bottom-color: $navigation-active-color;
             color:$navigation-active-color ;
         }
-    }
 
-    
-    @media (max-width:1024px) {
-        @include text (12px, 700, $primary-color);
+        @include tablet{
+            width: 112px;
+            @include text (12px, 700, $primary-color);
+        }
+
+        @include mobile{
+
+        }
     }
+  
 }
 
 .menu__burger{
@@ -86,23 +86,42 @@
     @include text(64px,900,$primary-color);  
 
     text-transform: uppercase; 
-    max-width: 1170px;
-
+    width: 100%;
     margin: auto;
     text-align: center;
-    margin-bottom:30px;
+    margin-bottom:31px;
+
+    @include tablet{
+        @include text(48px,900,$primary-color);
+        margin-bottom:62px;
+    }
+
+    @include mobile{
+
+    }
 }
 .header__content-description {
     @include text(24px,400,$primary-color);    
 
-    max-width: 1170px;
-
+    width: 100%;
     margin: auto;
     text-align: center;
     margin-bottom: 80px;
+
+    @include tablet{
+        @include text(18px,400,$primary-color);   
+        margin-bottom: 90px;
+    }
+
+    @include mobile{
+        
+    }
 }
 .header__button {
     margin: auto;
     text-align: center;
+}
+.button{
+    @include button;
 }
 

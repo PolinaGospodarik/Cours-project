@@ -21,3 +21,37 @@
         @content;
     }
 }
+
+@mixin button{
+    display: inline-block;
+    width: 370px;
+    line-height: 78px;
+    background-color: $button-color;
+    
+    text-align: center;
+
+    @include text(24px,900,$primary-color);  
+    
+    text-transform: uppercase;  
+    transition: 0.5s ease-out; 
+
+    &:hover{
+        background-color: $button-hover-color;
+    }
+    &:active{
+        background-color: $button-color;
+        box-shadow: 0 0 30px $button-color;
+    }
+
+    @include tablet{
+        width: 313px;
+        @include text(18px,900,$primary-color);  
+        line-height: 80px;
+    }
+
+    @include mobile{
+        width: 280px;
+        @include text(18px,900,$primary-color); 
+        line-height: 80px; 
+    }
+}
