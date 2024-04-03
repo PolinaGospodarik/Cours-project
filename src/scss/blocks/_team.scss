@@ -15,11 +15,11 @@
     justify-content: center;
     display: grid;
     grid-template: repeat(1, minmax(619px, auto)) / repeat(4, 270px);
-    grid-column-gap: 30px ;
+    grid-column-gap: 38px ;
     
     @include tablet{
-        grid-template: repeat(1, minmax(520px, auto)) / repeat(4, 227px);
-        grid-column-gap: 25px ;
+        grid-template: repeat(1, minmax(521px, auto)) / repeat(4, 220px);
+        grid-column-gap: 20px ;
     }
     @include mobile{
         grid-template: repeat(4, minmax(521px, auto)) / repeat(1, 280px);
@@ -43,7 +43,7 @@
         @include text(18px,700,$title-color);
     }
     @include mobile{
-        margin-bottom: 38.5px;
+        margin-bottom: 5px;
     }
 }
 .team__subtitle {

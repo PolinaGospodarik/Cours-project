@@ -1,35 +1,52 @@
 .footer {
     padding-top: 71.14px;
-    background: $footer-color;   
+    background: $footer-color;  
+     
 }
 .footer__content {
     display: flex;
     justify-content: space-between;
-    margin-bottom:67.14px ;
-    flex-wrap: wrap;
+    margin-bottom:67.14px;
+
+    @include mobile{
+
+    }
 }
 .footer-item {
     margin: 0;
     text-align: center;
     max-width: 370px;
+    @include tablet{
+        width: 315px;
+    }
 }
 .footer__title {
-    font-size: 18px;
-    font-weight: 700;
-    color: $primary-color;
+    @include text(18px, 700, $primary-color);
+
     text-transform: uppercase;
     margin-bottom: 29px;
+
+    @include tablet{
+        @include text(14px, 700, $primary-color);
+    }
 }
 .footer__description {
-    font-size: 18px;
-    font-weight: 400;
-    color: $primary-color;
+    @include text (18px, 400, $primary-color);
+    text-transform: capitalize;
+
+    @include tablet{
+        @include text(14px, 400, $primary-color);
+        width: 100%;
+    }
 }
 .footer__social-media {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+    @include tablet{
+        max-width: 145px;
+    }
 }
 .footer__icon {
     display: flex;
@@ -45,16 +62,19 @@
 
 .footer-scopyright {
     background: $footer-copyright-color;
-    padding: 24px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: center;
 }
 .footer__copyright-description {
     text-align: center;
     max-width: 370px;
-    font-size: 18px;
-    font-weight: 400;
-    color: $copyright-text-color;
+    @include text (18px, 400, $copyright-text-color);
+
+    @include tablet{
+        max-width: 314px;
+        @include text (14px, 400, $copyright-text-color);
+    }
 }
 .footer__copyright-accent {
     display: inline-block;

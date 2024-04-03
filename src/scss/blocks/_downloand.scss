@@ -45,6 +45,11 @@
     margin: auto;
     text-align: center;
 }
-.button{
-    @include button;
+.downloand__button a{
+
+    @include mobile{
+        width: 278px;
+        @include text(18px,900,$primary-color); 
+        line-height: 78px; 
+    }
 }

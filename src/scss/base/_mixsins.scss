@@ -3,6 +3,25 @@
     font-weight: $weight;
     color: $color;
 }
+@mixin background {
+    background: url(../img/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    &::after{
+        content: '';
+        background-color: $mask-color;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+        z-index: 0;
+    }
+}
 
 @mixin px-to-rem($px-value) {
     $rem-value: $px-value / $base-font-size;
@@ -22,36 +41,3 @@
     }
 }
 
-@mixin button{
-    display: inline-block;
-    width: 370px;
-    line-height: 78px;
-    background-color: $button-color;
-    
-    text-align: center;
-
-    @include text(24px,900,$primary-color);  
-    
-    text-transform: uppercase;  
-    transition: 0.5s ease-out; 
-
-    &:hover{
-        background-color: $button-hover-color;
-    }
-    &:active{
-        background-color: $button-color;
-        box-shadow: 0 0 30px $button-color;
-    }
-
-    @include tablet{
-        width: 313px;
-        @include text(18px,900,$primary-color);  
-        line-height: 80px;
-    }
-
-    @include mobile{
-        width: 280px;
-        @include text(18px,900,$primary-color); 
-        line-height: 80px; 
-    }
-}
