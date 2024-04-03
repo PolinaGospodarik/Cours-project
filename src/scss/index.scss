@@ -28,8 +28,6 @@ html{
     max-width: 1170px;
     padding: 0 15px;
     margin: auto;
-    position: relative;
-    z-index: 2;
 
     @include tablet{
         max-width: 984px;
@@ -54,6 +52,9 @@ html{
     
     text-transform: uppercase;  
     transition: 0.5s ease-out; 
+
+    animation: pulse 2s infinite;
+    @include button-animation;
 
     &:hover{
         background-color: $button-hover-color;

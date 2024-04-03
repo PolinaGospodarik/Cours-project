@@ -5,14 +5,16 @@
 }
 
 .header__top {
+    position: relative;
+    z-index: 2;
     margin-bottom: 130px;
     @include mobile{
+        position: static;
         margin-bottom: 50px;
     }
 }
 .header__top-inner {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items:center;
     border-bottom: 1px solid $navigation-separator-color;
@@ -49,9 +51,9 @@
         z-index: 3;
         transition: 1s;
         transform: translate(0, -100%);
-
     }
 }   
+
 .menu__list-item {
     text-align: center;
     @include mobile{
@@ -120,7 +122,8 @@
     display: none; 
 }
 .header__content {
-   
+    position: relative;
+    z-index: 1;
 
 }
 .header__content-inner {
@@ -166,6 +169,7 @@
 .header__button {
     margin: auto;
     text-align: center;
+
 }
 .header__button a{
 

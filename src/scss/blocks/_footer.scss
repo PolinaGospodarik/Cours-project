@@ -9,15 +9,24 @@
     margin-bottom:67.14px;
 
     @include mobile{
-
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom:0px;
     }
 }
 .footer-item {
-    margin: 0;
     text-align: center;
     max-width: 370px;
     @include tablet{
         width: 315px;
+    }
+    @include mobile{
+        max-width: 280px;
+        margin-bottom: 70px;
+        .footer-item:last-child{
+            margin-bottom: 0px;
+        }
     }
 }
 .footer__title {
@@ -28,6 +37,9 @@
 
     @include tablet{
         @include text(14px, 700, $primary-color);
+    }
+    @include mobile{
+        margin-bottom: 36px;
     }
 }
 .footer__description {
@@ -75,9 +87,11 @@
         max-width: 314px;
         @include text (14px, 400, $copyright-text-color);
     }
+    @include mobile{
+        max-width: 280px;
+    }
 }
 .footer__copyright-accent {
     display: inline-block;
     color: $primary-color;
-
 }
